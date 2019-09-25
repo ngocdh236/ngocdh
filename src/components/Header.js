@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react';
 
 import '../styles/Header.scss';
 
-export default function Header() {
+export default function Header(props) {
   const jobTitleReducer = (state, action) => {
     const { type, character } = action;
     switch (type) {
@@ -45,11 +45,14 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='d-flex justify-content-center align-items-center text-center'>
+    <header
+      ref={props.reference}
+      className='d-flex justify-content-center align-items-center text-center'
+    >
       <div className='text-background'></div>
       <div className='text'>
-        <h1 className='mb-4'>Ngoc Doan</h1>
-        <p className='lead'>{`${jobTitle}|`}</p>
+        <h1 className='mb-5 display-1'>Ngoc Doan</h1>
+        <h3>{`${jobTitle}|`}</h3>
       </div>
     </header>
   );

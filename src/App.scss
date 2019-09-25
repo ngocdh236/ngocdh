@@ -1,2 +1,35 @@
 .App {
+  a,
+  input,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: var(--color-primary);
+    outline: none;
+    resize: none;
+    border: none;
+    background: inherit;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  button {
+    background: transparent;
+    &:focus {
+      outline: 0;
+    }
+    border: none;
+    border-radius: 1mm;
+  }
+
+  .Projects,
+  .Skills,
+  .Experience {
+    border-bottom: 1px solid gainsboro;
+
+    h1 {
+      border-bottom: 50px !important;
+    }
+  }
 }
