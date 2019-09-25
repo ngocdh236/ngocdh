@@ -1,0 +1,71 @@
+import React from 'react';
+
+import '../styles/Projects.scss';
+
+export default function Projects(props) {
+  const projects = [
+    {
+      id: 0,
+      name: 'Formly',
+      link: 'http://formly-admin.netlify.com',
+      description:
+        'A web application for form customization and online surveys',
+      stacks: [
+        'React',
+        'Flow',
+        'Storybook',
+        'SCSS',
+        'Node.js',
+        'Express.js',
+        'Mongoose',
+        'Heroku',
+        'Zeit'
+      ]
+    },
+    {
+      id: 1,
+      name: 'Todo',
+      link: 'https://www.titekapps.com/',
+      description: 'A todo wep application',
+      stacks: ['React', 'HTML', 'SCSS', 'Bootstrap']
+    },
+    {
+      id: 2,
+      name: 'SoundscapeMixer',
+      link: 'https://github.com/Metropolia-Soundscape/soundscape-mixer',
+      description:
+        'An iOS application that can be used to create soundscapes from existing sound libraries, used in workshops and museums for research purpose',
+      stacks: ['Swift', 'Realm']
+    },
+    {
+      id: 3,
+      name: 'RouteMeNow',
+      link:
+        'https://bitbucket.org/duc_thinh_vo/route-me-now-android/src/master/',
+      description:
+        'An Android application for journey planner using HSL public transport system',
+      stacks: ['Kotlin']
+    }
+  ];
+
+  return (
+    <div ref={props.reference} className='Projects container mt-5 pb-5'>
+      <h1>Projects</h1>
+      {projects.map(project => (
+        <a
+          className='project-card mt-4'
+          href={project.link}
+          target='_blank'
+          rel='noopener noreferrer'
+          key={project.id}
+        >
+          <h4>{project.name}</h4>
+          <p className='lead'>{project.description}</p>
+          {project.stacks.map(element => (
+            <span key={element}>{`${element} . `}</span>
+          ))}
+        </a>
+      ))}
+    </div>
+  );
+}
