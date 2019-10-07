@@ -24,13 +24,13 @@ export default function Education(props) {
         >
           <div>
             <h3>{element.school}</h3>
-            <div className=' mb-3'>{element.degreeTitle}</div>
+            <div className='mb-3'>{element.degreeTitle}</div>
             <p>
               {element.degreeProgram} - {element.major}
             </p>
           </div>
 
-          <span className='text-md-right text-primary'>{element.time}</span>
+          <span className='text-md-right text-time'>{element.time}</span>
         </div>
       ))}
     </div>

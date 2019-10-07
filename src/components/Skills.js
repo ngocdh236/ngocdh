@@ -4,17 +4,16 @@ import '../styles/Skills.scss';
 
 export default function Skills(props) {
   const icons = [
-    'fab fa-js-square',
-    'fab fa-react',
-    'fab fa-sass',
-    'fab fa-css3-alt',
-    'fab fa-bootstrap',
-    'fab fa-html5',
-    'fab fa-npm',
-    'fab fa-node-js',
-    'fab fa-swift',
-    'fab fa-github',
-    'fab fa-bitbucket'
+    { name: 'fab fa-js-square', color: '#f0db4f' },
+    { name: 'fab fa-react', color: '#61dbfb' },
+    { name: 'fab fa-sass', color: '#cd6799' },
+    { name: 'fab fa-css3-alt', color: '#e31b5f' },
+    { name: 'fab fa-html5', color: '#E44D26' },
+    { name: 'fab fa-npm', color: '#303030' },
+    { name: 'fab fa-node-js', color: '#3C873A' },
+    { name: 'fab fa-swift', color: 'orange' },
+    { name: 'fab fa-github', color: '#7dbbe6' },
+    { name: 'fab fa-bitbucket', color: '#0357D1' }
   ];
 
   const skills = [
@@ -24,11 +23,21 @@ export default function Skills(props) {
       list: [
         'JavaScript',
         'SCSS',
-        'React, Redux',
+        'React, Redux, Flow',
         'Node.js, Express.js, Mongoose'
       ]
     },
-    { id: 1, title: 'Knowledgeable With', list: ['Design UI, UX', 'Swift'] }
+    {
+      id: 1,
+      title: 'Knowledgeable With',
+      list: [
+        'Mocha, Chai, Sinon',
+        'Jest',
+        'Storybook',
+        'Design UI, UX',
+        'Swift'
+      ]
+    }
   ];
 
   const workflow = [
@@ -44,8 +53,8 @@ export default function Skills(props) {
 
       <ul className='list-inline dev-icons'>
         {icons.map(icon => (
-          <li key={icon} className='list-inline-item'>
-            <i className={icon}></i>
+          <li key={icon.name} className='list-inline-item'>
+            <i className={icon.name} style={{ color: icon.color }}></i>
           </li>
         ))}
       </ul>

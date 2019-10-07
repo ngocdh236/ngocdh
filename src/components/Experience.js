@@ -36,7 +36,7 @@ export default function Experience(props) {
         >
           <div>
             <h3>{element.title}</h3>
-            <div className=' mb-3'>{element.company}</div>
+            <div className='mb-3'>{element.company}</div>
             <ul>
               {element.tasks.map(task => (
                 <li key={task}>{task}</li>
@@ -44,7 +44,7 @@ export default function Experience(props) {
             </ul>
           </div>
 
-          <span className='text-md-right text-primary'>{element.time}</span>
+          <span className='text-md-right text-time'>{element.time}</span>
         </div>
       ))}
     </div>

@@ -25,11 +25,25 @@
 
   .Projects,
   .Skills,
-  .Experience {
+  .Experience,
+  .Education {
     border-bottom: 1px solid gainsboro;
 
     h1 {
-      border-bottom: 50px !important;
+      margin-bottom: 40px;
+      background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p,
+    ul {
+      color: #1c1c1e;
+    }
+
+    .text-time {
+      color: #5d707f;
     }
   }
 }
