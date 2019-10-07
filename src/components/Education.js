@@ -6,7 +6,7 @@ export default function Education(props) {
   const education = [
     {
       id: 0,
-      school: 'METROPOLIA UNIVERSITY OF APPLIED SCIENCES',
+      school: 'Metropolia University Of Applied Sciences',
       degreeTitle: 'Bachelor of Engineering',
       degreeProgram: 'Information Technology',
       major: 'Mobile Solutions',
@@ -24,10 +24,11 @@ export default function Education(props) {
         >
           <div>
             <h3>{element.school}</h3>
-            <div className='mb-3'>{element.degreeTitle}</div>
-            <p>
-              {element.degreeProgram} - {element.major}
-            </p>
+            <ul>
+              <li>{element.degreeTitle}</li>
+              <li>{element.degreeProgram}</li>
+              <li>{element.major}</li>
+            </ul>
           </div>
 
           <span className='text-md-right text-time'>{element.time}</span>
