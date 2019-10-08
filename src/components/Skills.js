@@ -35,7 +35,7 @@ export default function Skills(props) {
         'Jest',
         'Storybook',
         'Design UI, UX',
-        'Swift'
+        'Swift, Kotlin'
       ]
     }
   ];

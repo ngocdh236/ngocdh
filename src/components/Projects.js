@@ -33,6 +33,14 @@ export default function Projects(props) {
     },
     {
       id: 2,
+      name: 'Flashcard-backend',
+      link: 'https://github.com/ngocdh236/flashcard-backend',
+      description: 'An API for flashcard application',
+      image: require('../assets/images/projectFlashBackend.png'),
+      stacks: ['Node.js', 'Express.js', 'Mongoose', 'Heroku']
+    },
+    {
+      id: 3,
       name: 'SoundscapeMixer',
       link: 'https://github.com/Metropolia-Soundscape/soundscape-mixer',
       description:
@@ -41,7 +49,7 @@ export default function Projects(props) {
       stacks: ['Swift', 'Realm']
     },
     {
-      id: 3,
+      id: 4,
       name: 'RouteMeNow',
       link:
         'https://bitbucket.org/duc_thinh_vo/route-me-now-android/src/master/',
