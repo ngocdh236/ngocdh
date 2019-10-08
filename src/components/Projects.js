@@ -46,7 +46,7 @@ export default function Projects(props) {
       link:
         'https://bitbucket.org/duc_thinh_vo/route-me-now-android/src/master/',
       description:
-        'An Android application for journey planner using HSL public transport system',
+        "An Android application for journey planner using HSL's APIs",
       image: require('../assets/images/projectRoute.png'),
       stacks: ['Kotlin']
     }
