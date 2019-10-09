@@ -35,12 +35,28 @@ export default function Projects(props) {
       id: 2,
       name: 'Flashcard-backend',
       link: 'https://github.com/ngocdh236/flashcard-backend',
-      description: 'An API for flashcard application',
+      description: 'An API for flashcard-web application',
       image: require('../assets/images/projectFlashBackend.png'),
       stacks: ['Node.js', 'Express.js', 'Mongoose', 'Heroku']
     },
     {
       id: 3,
+      name: 'Gogocar-assignment',
+      link: 'https://gogocar-assignment.now.sh/',
+      description: "A web application for querying routes from HSL's APIs",
+      image: require('../assets/images/projectGogo.png'),
+      stacks: ['React', 'React-google-maps', 'Apollo Client', 'Zeit']
+    },
+    {
+      id: 4,
+      name: 'DREAMBROKER-assignment',
+      link: 'https://github.com/ngocdh236/DREAMBROKER-TheProgrammingAssignment',
+      description: 'An endpoint to analyze text',
+      image: require('../assets/images/projectDREAM.png'),
+      stacks: ['Node.js', 'Express.js', 'Heroku']
+    },
+    {
+      id: 5,
       name: 'SoundscapeMixer',
       link: 'https://github.com/Metropolia-Soundscape/soundscape-mixer',
       description:
@@ -49,7 +65,7 @@ export default function Projects(props) {
       stacks: ['Swift', 'Realm']
     },
     {
-      id: 4,
+      id: 6,
       name: 'RouteMeNow',
       link:
         'https://bitbucket.org/duc_thinh_vo/route-me-now-android/src/master/',
