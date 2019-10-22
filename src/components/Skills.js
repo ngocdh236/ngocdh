@@ -21,8 +21,7 @@ export default function Skills(props) {
       id: 0,
       title: 'Strong In',
       list: [
-        'JavaScript',
-        'SCSS',
+        'JavaScript, SCSS, HTML',
         'React, Redux, Flow',
         'Node.js, Express.js, Mongoose'
       ]
@@ -30,38 +29,31 @@ export default function Skills(props) {
     {
       id: 1,
       title: 'Knowledgeable With',
-      list: [
-        'Mocha, Chai, Sinon',
-        'Jest',
-        'Storybook',
-        'Design UI, UX',
-        'Swift, Kotlin'
-      ]
+      list: ['iOS, Android development', 'Design', 'Unit testing', 'GraphQL']
     }
   ];
 
   const workflow = [
-    'Mobile-First, Responsive Design',
-    'Maintainable, Reusable, Scalable & Testable Code',
+    'Responsive Design',
     'Continuous Integration, Continuous Delivery',
     'Agile Development & Scrum'
   ];
 
   return (
-    <div ref={props.reference} className='Skills container mt-5 pb-5'>
+    <div ref={props.reference} className="Skills container mt-5 pb-5">
       <h1>Skills</h1>
 
-      <ul className='list-inline dev-icons'>
+      <ul className="list-inline dev-icons">
         {icons.map(icon => (
-          <li key={icon.name} className='list-inline-item'>
+          <li key={icon.name} className="list-inline-item">
             <i className={icon.name} style={{ color: icon.color }}></i>
           </li>
         ))}
       </ul>
 
-      <div className='d-flex my-5'>
+      <div className="d-flex my-5">
         {skills.map(skill => (
-          <div key={skill.id} className='mr-5'>
+          <div key={skill.id} className="mr-5">
             <h4>{skill.title}</h4>
             <ul>
               {skill.list.map(element => (
@@ -73,10 +65,10 @@ export default function Skills(props) {
       </div>
 
       <h4>Workflow</h4>
-      <ul className='fa-ul'>
+      <ul className="fa-ul">
         {workflow.map(element => (
           <li key={element}>
-            <i className='fa-li fa fa-check'></i>
+            <i className="fa-li fa fa-check"></i>
             {element}
           </li>
         ))}

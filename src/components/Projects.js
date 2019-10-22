@@ -62,7 +62,7 @@ export default function Projects(props) {
       description:
         'An iOS application that can be used to create soundscapes from existing sound libraries, used in workshops and museums for research purpose',
       image: require('../assets/images/projectSoundscape.png'),
-      stacks: ['Swift', 'Realm']
+      stacks: ['iOS', 'Swift', 'Realm']
     },
     {
       id: 6,
@@ -72,20 +72,29 @@ export default function Projects(props) {
       description:
         "An Android application for journey planner using HSL's APIs",
       image: require('../assets/images/projectRoute.png'),
-      stacks: ['Kotlin']
+      stacks: ['Android', 'Kotlin']
+    },
+    {
+      id: 7,
+      name: 'RECYCLER',
+      link: 'https://github.com/ahlstronomi/RECYCLER',
+      description:
+        'An iOS application that provides recycling information for people living in Finland',
+      image: require('../assets/images/projectRecycler.png'),
+      stacks: ['iOS', 'Swift']
     }
   ];
 
   return (
-    <div ref={props.reference} className='Projects container mt-5 pb-5'>
+    <div ref={props.reference} className="Projects container mt-5 pb-5">
       <h1>Projects</h1>
-      <div className='d-flex flex-wrap justify-content-between'>
+      <div className="d-flex flex-wrap justify-content-between">
         {projects.map(project => (
           <a
-            className='project-card mt-4'
+            className="project-card mt-4"
             href={project.link}
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
             key={project.id}
           >
             <h4>{project.name}</h4>
@@ -93,7 +102,7 @@ export default function Projects(props) {
             <img
               style={{ width: '100%', marginBottom: '30px' }}
               src={project.image}
-              alt='projectTodo'
+              alt={project.name}
             ></img>
             <div>
               {project.stacks.map(element => (
