@@ -26,7 +26,7 @@ export default function Projects(props) {
     {
       id: 1,
       name: 'Todo',
-      link: 'https://www.titekapps.com/',
+      link: 'https://todo-web.netlify.com/',
       description: 'A todo wep application',
       image: require('../assets/images/projectTodo.png'),
       stacks: ['React', 'HTML', 'SCSS', 'Bootstrap']
