@@ -20,7 +20,7 @@ export default function Projects(props) {
         'Express.js',
         'Mongoose',
         'Heroku',
-        'Zeit'
+        'Netlify'
       ]
     },
     {
