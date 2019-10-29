@@ -40,6 +40,14 @@ export default function Projects(props) {
       stacks: ['Node.js', 'Express.js', 'Mongoose', 'Heroku']
     },
     {
+      id: 8,
+      name: 'Flashcard-web (in progress)',
+      link: 'https://github.com/ngocdh236/flashcard-web',
+      description: 'A flashcard web application',
+      image: require('../assets/images/projectFlashWeb.png'),
+      stacks: ['React', 'HTML', 'SCSS', 'Bootstrap']
+    },
+    {
       id: 3,
       name: 'Gogocar-assignment',
       link: 'https://gogocar-assignment.now.sh/',
