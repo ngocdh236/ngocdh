@@ -16,9 +16,14 @@ export default function Projects(props) {
         'Flow',
         'Storybook',
         'SCSS',
+        'Jest',
+        'Enzyme',
         'Node.js',
         'Express.js',
         'Mongoose',
+        'Mocha',
+        'Chai',
+        'Sinon',
         'Heroku',
         'Netlify'
       ]
@@ -29,7 +34,7 @@ export default function Projects(props) {
       link: 'https://todo-web.netlify.com/',
       description: 'A todo wep application',
       image: require('../assets/images/projectTodo.png'),
-      stacks: ['React', 'HTML', 'SCSS', 'Bootstrap']
+      stacks: ['React', 'HTML', 'SCSS', 'Bootstrap', 'Netlify']
     },
     {
       id: 2,
@@ -45,7 +50,7 @@ export default function Projects(props) {
       link: 'https://github.com/ngocdh236/flashcard-web',
       description: 'A flashcard web application',
       image: require('../assets/images/projectFlashWeb.png'),
-      stacks: ['React', 'HTML', 'SCSS', 'Bootstrap']
+      stacks: ['React', 'HTML', 'SCSS', 'Bootstrap', 'Zeit']
     },
     {
       id: 3,
@@ -61,7 +66,7 @@ export default function Projects(props) {
       link: 'https://github.com/ngocdh236/DREAMBROKER-TheProgrammingAssignment',
       description: 'An endpoint to analyze text',
       image: require('../assets/images/projectDREAM.png'),
-      stacks: ['Node.js', 'Express.js', 'Heroku']
+      stacks: ['Node.js', 'Express.js', 'Heroku', 'Mocha', 'Chai']
     },
     {
       id: 5,
