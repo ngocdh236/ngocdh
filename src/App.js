@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import './App.scss';
 
@@ -25,8 +25,17 @@ function App() {
   const scrollToExperience = () => scrollToRef(experienceRef);
   const scrollToEducation = () => scrollToRef(educationRef);
 
+  useEffect(() => {
+    fetch(
+      'https://web-traffic-tracking.herokuapp.com/api/5dbc19207c213e208d1cbfcd',
+      {
+        method: 'POST'
+      }
+    );
+  }, []);
+
   return (
-    <div className='App'>
+    <div className="App">
       <Nav
         scrollToHeader={scrollToHeader}
         scrollToProjects={scrollToProjects}
