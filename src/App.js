@@ -26,12 +26,9 @@ function App() {
   const scrollToEducation = () => scrollToRef(educationRef);
 
   useEffect(() => {
-    fetch(
-      'https://web-traffic-tracking.herokuapp.com/api/5dbc19207c213e208d1cbfcd',
-      {
-        method: 'POST'
-      }
-    );
+    fetch('https://web-traffic-tracking.herokuapp.com/api/ngocdh', {
+      method: 'POST'
+    });
   }, []);
 
   return (
