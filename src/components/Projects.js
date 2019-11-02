@@ -27,12 +27,10 @@ export default function Projects(props) {
         'Heroku',
         'Netlify'
       ],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/Formly',
-        {
+      addTraffic: () =>
+        fetch('https://web-traffic-tracking.herokuapp.com/api/Formly', {
           method: 'POST'
-        }
-      )
+        })
     },
     {
       id: 1,
@@ -49,12 +47,13 @@ export default function Projects(props) {
       description: 'An API for flashcard-web application',
       image: require('../assets/images/projectFlashBackend.png'),
       stacks: ['Node.js', 'Express.js', 'Mongoose', 'Heroku'],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/Flashcard-backend',
-        {
-          method: 'POST'
-        }
-      )
+      addTraffic: () =>
+        fetch(
+          'https://web-traffic-tracking.herokuapp.com/api/Flashcard-backend',
+          {
+            method: 'POST'
+          }
+        )
     },
     {
       id: 8,
@@ -71,12 +70,10 @@ export default function Projects(props) {
       description: "A web application for querying routes from HSL's APIs",
       image: require('../assets/images/projectGogo.png'),
       stacks: ['React', 'React-google-maps', 'Apollo Client', 'Zeit'],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/Gogocar',
-        {
+      addTraffic: () =>
+        fetch('https://web-traffic-tracking.herokuapp.com/api/Gogocar', {
           method: 'POST'
-        }
-      )
+        })
     },
     {
       id: 4,
@@ -85,12 +82,10 @@ export default function Projects(props) {
       description: 'An endpoint to analyze text',
       image: require('../assets/images/projectDREAM.png'),
       stacks: ['Node.js', 'Express.js', 'Heroku', 'Mocha', 'Chai'],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/DREAMBROKER',
-        {
+      addTraffic: () =>
+        fetch('https://web-traffic-tracking.herokuapp.com/api/DREAMBROKER', {
           method: 'POST'
-        }
-      )
+        })
     },
     {
       id: 5,
@@ -100,12 +95,13 @@ export default function Projects(props) {
         'An iOS application that can be used to create soundscapes from existing sound libraries, used in workshops and museums for research purpose',
       image: require('../assets/images/projectSoundscape.png'),
       stacks: ['iOS', 'Swift', 'Realm'],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/SoundscapeMixer',
-        {
-          method: 'POST'
-        }
-      )
+      addTraffic: () =>
+        fetch(
+          'https://web-traffic-tracking.herokuapp.com/api/SoundscapeMixer',
+          {
+            method: 'POST'
+          }
+        )
     },
     {
       id: 6,
@@ -116,12 +112,10 @@ export default function Projects(props) {
         "An Android application for journey planner using HSL's APIs",
       image: require('../assets/images/projectRoute.png'),
       stacks: ['Android', 'Kotlin'],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/RouteMeNow',
-        {
+      addTraffic: () =>
+        fetch('https://web-traffic-tracking.herokuapp.com/api/RouteMeNow', {
           method: 'POST'
-        }
-      )
+        })
     },
     {
       id: 7,
@@ -131,12 +125,10 @@ export default function Projects(props) {
         'An iOS application that provides recycling information for people living in Finland',
       image: require('../assets/images/projectRecycler.png'),
       stacks: ['iOS', 'Swift'],
-      addTraffic: fetch(
-        'https://web-traffic-tracking.herokuapp.com/api/RECYCLER',
-        {
+      addTraffic: () =>
+        fetch('https://web-traffic-tracking.herokuapp.com/api/RECYCLER', {
           method: 'POST'
-        }
-      )
+        })
     }
   ];
 
