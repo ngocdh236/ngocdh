@@ -15,8 +15,8 @@ export default function Education(props) {
   ];
 
   return (
-    <div ref={props.reference} className="Education container mt-5 pb-5">
-      <h1>Education</h1>
+    <div ref={props.reference} className="Education p-5">
+      <h2>Education</h2>
 
       {education.map(element => (
         <div
@@ -24,10 +24,10 @@ export default function Education(props) {
           className="d-flex flex-column flex-md-row justify-content-between mb-5"
         >
           <div>
-            <h3>
+            <h5>
               {element.degreeTitle} in {element.degreeProgram}, Major in{' '}
               {element.major}
-            </h3>
+            </h5>
             <p className="lead">{element.school} </p>
           </div>
 

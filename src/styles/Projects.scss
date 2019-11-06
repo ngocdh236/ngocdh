@@ -3,7 +3,6 @@
 .Projects {
   display: flex;
   flex-wrap: wrap;
-  z-index: 3;
 
   .project-card {
     display: flex;
@@ -23,10 +22,18 @@
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .Projects {
+    .project-card {
+      width: 45%;
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .Projects {
     .project-card {
-      width: 48%;
+      width: 30%;
     }
   }
 }

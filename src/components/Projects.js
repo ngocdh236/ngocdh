@@ -133,8 +133,8 @@ export default function Projects(props) {
   ];
 
   return (
-    <div ref={props.reference} className="Projects container mt-5 pb-5">
-      <h1>Projects</h1>
+    <div ref={props.reference} className="Projects p-5">
+      <h2>Projects</h2>
       <div className="d-flex flex-wrap justify-content-between">
         {projects.map(project => (
           <a
@@ -145,7 +145,7 @@ export default function Projects(props) {
             key={project.id}
             onClick={project.addTraffic ? project.addTraffic : null}
           >
-            <h4>{project.name}</h4>
+            <h5>{project.name}</h5>
             <p>{project.description}</p>
             <img
               style={{ width: '100%', marginBottom: '30px' }}

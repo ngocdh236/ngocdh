@@ -1,4 +1,6 @@
 .App {
+  width: 100vw;
+
   a,
   input,
   textarea {
@@ -27,10 +29,11 @@
   .Skills,
   .Experience,
   .Education {
+    background: white;
     border-bottom: 1px solid gainsboro;
 
-    h1 {
-      margin-bottom: 40px;
+    h2 {
+      margin-bottom: 30px;
       background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
       background-clip: text;
       -webkit-background-clip: text;

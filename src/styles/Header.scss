@@ -1,16 +1,18 @@
 @import '../App.scss';
 
 header {
-  height: 100vh;
   background-image: url('../assets/images/background.jpg');
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   .text-background {
-    height: 100vh;
-    width: 100vw;
     background-color: rgba(33, 37, 41, 0.6);
     top: 0;
     bottom: 0;

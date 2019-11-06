@@ -27,30 +27,36 @@ export default function Nav(props) {
     {
       title: 'Education',
       onClick: scrollToEducation
+    },
+    {
+      title: 'About',
+      onClick: () => {
+        props.history.push('/about');
+      }
     }
   ];
   return (
-    <nav className='Nav navbar navbar-expand-sm'>
-      <button className='navbar-brand' onClick={scrollToHeader}>
+    <nav className="Nav navbar navbar-expand-sm">
+      <button className="navbar-brand" onClick={scrollToHeader}>
         NGOC
       </button>
       <button
-        className='navbar-toggler'
-        type='button'
-        data-toggle='collapse'
-        data-target='#mobile-nav'
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#mobile-nav"
       >
-        <i className='fas fa-bars' />
+        <i className="fas fa-bars" />
       </button>
 
       <div
-        className='collapse navbar-collapse navbar-default ml-2'
-        id='mobile-nav'
+        className="collapse navbar-collapse navbar-default ml-2"
+        id="mobile-nav"
       >
-        <ul className='navbar-nav ml-auto'>
+        <ul className="navbar-nav ml-auto">
           {links.map(link => (
-            <li key={link.title} className='nav-item'>
-              <button className='nav-link' onClick={link.onClick}>
+            <li key={link.title} className="nav-item">
+              <button className="nav-link" onClick={link.onClick}>
                 {link.title}
               </button>
             </li>

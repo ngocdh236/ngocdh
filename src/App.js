@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.scss';
 
@@ -8,9 +9,19 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import About from './components/About';
 
 const scrollToRef = ref =>
-  window.scrollTo({ top: ref.current.offsetTop - 80, behavior: 'smooth' });
+  window.scrollTo({
+    top: ref.current.offsetTop + window.innerHeight - 60,
+    behavior: 'smooth'
+  });
+
+const scrollToHead = ref =>
+  window.scrollTo({
+    top: ref.current.offsetTop,
+    behavior: 'smooth'
+  });
 
 function App() {
   const headerRef = useRef(null);
@@ -19,7 +30,7 @@ function App() {
   const experienceRef = useRef(null);
   const educationRef = useRef(null);
 
-  const scrollToHeader = () => scrollToRef(headerRef);
+  const scrollToHeader = () => scrollToHead(headerRef);
   const scrollToProjects = () => scrollToRef(projectsRef);
   const scrollToSkills = () => scrollToRef(skillsRef);
   const scrollToExperience = () => scrollToRef(experienceRef);
@@ -32,20 +43,55 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Nav
-        scrollToHeader={scrollToHeader}
-        scrollToProjects={scrollToProjects}
-        scrollToSkills={scrollToSkills}
-        scrollToExperience={scrollToExperience}
-        scrollToEducation={scrollToEducation}
-      />
-      <Header reference={headerRef} />
-      <Projects reference={projectsRef} />
-      <Skills reference={skillsRef} />
-      <Experience reference={experienceRef} />
-      <Education reference={educationRef} />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Nav
+              {...props}
+              scrollToHeader={scrollToHeader}
+              scrollToProjects={scrollToProjects}
+              scrollToSkills={scrollToSkills}
+              scrollToExperience={scrollToExperience}
+              scrollToEducation={scrollToEducation}
+            />
+          )}
+        />
+
+        <Route
+          exact
+          path="/"
+          render={props => <Header reference={headerRef} />}
+        />
+
+        <div style={{ top: window.innerHeight, position: 'absolute' }}>
+          <Route
+            exact
+            path="/"
+            render={props => <Projects reference={projectsRef} />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <Skills reference={skillsRef} />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <Experience reference={experienceRef} />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <Education reference={educationRef} />}
+          />
+        </div>
+
+        <Route exact path="/about" component={About} />
+      </div>
+    </BrowserRouter>
   );
 }
 

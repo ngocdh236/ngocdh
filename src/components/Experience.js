@@ -26,17 +26,17 @@ export default function Experience(props) {
     }
   ];
   return (
-    <div ref={props.reference} className='Experience container mt-5 pb-5'>
-      <h1>Experience</h1>
+    <div ref={props.reference} className="Experience p-5">
+      <h2>Experience</h2>
 
       {experience.map(element => (
         <div
           key={element.id}
-          className='d-flex flex-column flex-md-row justify-content-between mb-5'
+          className="d-flex flex-column flex-md-row justify-content-between mb-5"
         >
           <div>
-            <h3>{element.title}</h3>
-            <div className='mb-3'>{element.company}</div>
+            <h5>{element.title}</h5>
+            <div className="mb-3">{element.company}</div>
             <ul>
               {element.tasks.map(task => (
                 <li key={task}>{task}</li>
@@ -44,7 +44,7 @@ export default function Experience(props) {
             </ul>
           </div>
 
-          <span className='text-md-right text-time'>{element.time}</span>
+          <span className="text-md-right text-time">{element.time}</span>
         </div>
       ))}
     </div>

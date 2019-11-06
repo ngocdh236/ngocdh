@@ -47,11 +47,12 @@ export default function Header(props) {
   return (
     <header
       ref={props.reference}
-      className='d-flex justify-content-center align-items-center text-center'
+      className="d-flex justify-content-center align-items-center text-center"
+      style={{ height: window.innerHeight }}
     >
-      <div className='text-background'></div>
-      <div className='text'>
-        <h1 className='mb-5 display-1'>Ngoc Doan</h1>
+      <div className="text-background"></div>
+      <div className="text">
+        <h1 className="mb-5 display-1">Ngoc Doan</h1>
         <h3>{`${jobTitle}|`}</h3>
       </div>
     </header>

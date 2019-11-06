@@ -40,8 +40,8 @@ export default function Skills(props) {
   ];
 
   return (
-    <div ref={props.reference} className="Skills container mt-5 pb-5">
-      <h1>Skills</h1>
+    <div ref={props.reference} className="Skills p-5">
+      <h2>Skills</h2>
 
       <ul className="list-inline dev-icons">
         {icons.map(icon => (
@@ -51,20 +51,18 @@ export default function Skills(props) {
         ))}
       </ul>
 
-      <div className="d-flex my-5">
-        {skills.map(skill => (
-          <div key={skill.id} className="mr-5">
-            <h4>{skill.title}</h4>
-            <ul>
-              {skill.list.map(element => (
-                <li key={element}>{element}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      {skills.map(skill => (
+        <div key={skill.id} className="mr-5">
+          <h5>{skill.title}</h5>
+          <ul>
+            {skill.list.map(element => (
+              <li key={element}>{element}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
-      <h4>Workflow</h4>
+      <h5>Workflow</h5>
       <ul className="fa-ul">
         {workflow.map(element => (
           <li key={element}>
