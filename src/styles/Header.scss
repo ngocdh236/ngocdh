@@ -1,7 +1,7 @@
 @import '../App.scss';
 
 header {
-  background-image: url('../assets/images/background.jpg');
+  background-image: url('../assets/images/headerBackground.jpg');
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,19 +11,4 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-
-  .text-background {
-    background-color: rgba(33, 37, 41, 0.6);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .text {
-    z-index: 2;
-    color: white;
-  }
 }

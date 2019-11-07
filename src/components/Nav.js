@@ -27,12 +27,6 @@ export default function Nav(props) {
     {
       title: 'Education',
       onClick: scrollToEducation
-    },
-    {
-      title: 'About',
-      onClick: () => {
-        props.history.push('/about');
-      }
     }
   ];
   return (

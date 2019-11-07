@@ -9,19 +9,15 @@ export default function Experience(props) {
       title: 'Teaching Assistant',
       company: 'LENA CULTURE CENTER - IELTS, TOEIC',
       time: 'March 2015 - June 2015',
-      tasks: [
-        'Manage and distribute documents to students',
-        "Check students' homework"
-      ]
+      tasks: ['Distribute documents', 'Check homework']
     },
     {
       id: 1,
       title: 'Junior Web Developer',
       company: 'INTEGRIFY',
-      time: 'June 2019 - present',
+      time: 'June 2019',
       tasks: [
-        'Back-end development (Node.js, Express.js, Mongoose)',
-        'Front-end development (React, Flow, Storybook)'
+        'Develop an in-house web application for form customization and online surveys using MERN stack'
       ]
     }
   ];

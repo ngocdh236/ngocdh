@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.scss';
 
@@ -9,26 +8,25 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
-import About from './components/About';
 
-const scrollToRef = ref =>
-  window.scrollTo({
-    top: ref.current.offsetTop + window.innerHeight - 60,
-    behavior: 'smooth'
-  });
-
-const scrollToHead = ref =>
-  window.scrollTo({
-    top: ref.current.offsetTop,
-    behavior: 'smooth'
-  });
-
-function App() {
+export default function App() {
   const headerRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
   const educationRef = useRef(null);
+
+  const scrollToRef = ref =>
+    window.scrollTo({
+      top: ref.current.offsetTop + window.innerHeight - 60,
+      behavior: 'smooth'
+    });
+
+  const scrollToHead = ref =>
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth'
+    });
 
   const scrollToHeader = () => scrollToHead(headerRef);
   const scrollToProjects = () => scrollToRef(projectsRef);
@@ -43,56 +41,39 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <Nav
-              {...props}
-              scrollToHeader={scrollToHeader}
-              scrollToProjects={scrollToProjects}
-              scrollToSkills={scrollToSkills}
-              scrollToExperience={scrollToExperience}
-              scrollToEducation={scrollToEducation}
-            />
-          )}
-        />
+    <div className="App">
+      <Nav
+        scrollToHeader={scrollToHeader}
+        scrollToProjects={scrollToProjects}
+        scrollToSkills={scrollToSkills}
+        scrollToExperience={scrollToExperience}
+        scrollToEducation={scrollToEducation}
+      />
+      <Header reference={headerRef} />}
+      <div
+        style={{
+          top: window.innerHeight,
+          position: 'absolute',
+          background: 'white'
+        }}
+      >
+        <Projects reference={projectsRef} />
+        <Skills reference={skillsRef} />
+        <Experience reference={experienceRef} />
+        <Education reference={educationRef} />
 
-        <Route
-          exact
-          path="/"
-          render={props => <Header reference={headerRef} />}
-        />
-
-        <div style={{ top: window.innerHeight, position: 'absolute' }}>
-          <Route
-            exact
-            path="/"
-            render={props => <Projects reference={projectsRef} />}
-          />
-          <Route
-            exact
-            path="/"
-            render={props => <Skills reference={skillsRef} />}
-          />
-          <Route
-            exact
-            path="/"
-            render={props => <Experience reference={experienceRef} />}
-          />
-          <Route
-            exact
-            path="/"
-            render={props => <Education reference={educationRef} />}
-          />
+        <div className="contact">
+          <div className="text-background"></div>
+          <div className="text">
+            <a href="mailto:ngocdh236@gmail.com">ngocdh236@gmail.com</a>
+            <br />
+            <br />
+            <a href="https://github.com/ngocdh236" target="blank">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
         </div>
-
-        <Route exact path="/about" component={About} />
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
-
-export default App;
