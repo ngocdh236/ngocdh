@@ -1,46 +1,58 @@
-import React, { useReducer, useEffect } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useReducer, useEffect } from "react";
 
-import '../styles/Header.scss';
+import "../styles/Header.scss";
 
 export default function Header(props) {
   const jobTitleReducer = (state, action) => {
     const { type, character } = action;
     switch (type) {
-      case 'ADD_CHARACTER':
+      case "ADD_CHARACTER":
         return state + character;
-      case 'REMOVE_CHARACTER':
+      case "REMOVE_CHARACTER":
         return state.slice(0, -1);
       default:
         return state;
     }
   };
 
-  const [jobTitle, dispatchJobTitle] = useReducer(jobTitleReducer, '');
+  const [jobTitle, dispatchJobTitle] = useReducer(jobTitleReducer, "");
+
+  const jobTitleCharacters = "Junior Software Developer".split("");
+
+  const addingCharacterTime = 80;
+  const removingCharacterTime = 40;
+  const pauseTime = 400;
+
+  const writingJobTitle = () => {
+    var timer = 0;
+
+    jobTitleCharacters.forEach(character => {
+      setTimeout(() => {
+        dispatchJobTitle({ type: "ADD_CHARACTER", character });
+      }, timer);
+      timer += addingCharacterTime;
+    });
+
+    timer += pauseTime;
+
+    jobTitleCharacters.forEach(character => {
+      setTimeout(() => {
+        dispatchJobTitle({ type: "REMOVE_CHARACTER", character });
+      }, timer);
+      timer += removingCharacterTime;
+    });
+  };
+
+  const { length } = jobTitleCharacters;
+  const jobTitleWritingTime =
+    length * addingCharacterTime +
+    pauseTime * 2 +
+    length * removingCharacterTime;
 
   useEffect(() => {
-    var timer = 100;
-    const interval = setInterval(() => {
-      const jobTitleCharacters = 'Junior Software Developer'.split('');
-
-      jobTitleCharacters.forEach(character => {
-        setTimeout(() => {
-          dispatchJobTitle({ type: 'ADD_CHARACTER', character });
-        }, timer);
-        timer += 80;
-      });
-
-      timer += 800;
-
-      jobTitleCharacters.forEach(character => {
-        setTimeout(() => {
-          dispatchJobTitle({ type: 'REMOVE_CHARACTER', character });
-        }, timer);
-        timer += 40;
-      });
-
-      timer += 800;
-    }, timer);
-
+    writingJobTitle();
+    const interval = setInterval(() => writingJobTitle(), jobTitleWritingTime);
     return () => clearInterval(interval);
   }, []);
 
