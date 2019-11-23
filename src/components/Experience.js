@@ -15,7 +15,7 @@ export default function Experience(props) {
       id: 1,
       title: 'Junior Web Developer',
       company: 'INTEGRIFY',
-      time: 'June 2019',
+      time: 'June 2019 - November 2019',
       tasks: [
         'Develop an in-house web application for form customization and online surveys using MERN stack'
       ]

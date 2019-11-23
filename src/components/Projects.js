@@ -129,6 +129,19 @@ export default function Projects(props) {
         fetch('https://web-traffic-tracking.herokuapp.com/api/RECYCLER', {
           method: 'POST'
         })
+    },
+    {
+      id: 8,
+      name: 'LeafLoad',
+      link: 'https://github.com/ngocdh236/LeafLoad',
+      description:
+        'A social media platform for environment protection related topics',
+      image: require('../assets/images/projectLeafLoad.png'),
+      stacks: ['Angular', 'Ionic'],
+      addTraffic: () =>
+        fetch('https://web-traffic-tracking.herokuapp.com/api/LeafLoad', {
+          method: 'POST'
+        })
     }
   ];
 
