@@ -1,23 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import '../styles/Experience.scss';
+import "../styles/Experience.scss";
 
 export default function Experience(props) {
   const experience = [
     {
       id: 0,
-      title: 'Teaching Assistant',
-      company: 'LENA CULTURE CENTER - IELTS, TOEIC',
-      time: 'March 2015 - June 2015',
-      tasks: ['Distribute documents', 'Check homework']
+      title: "Junior Software Engineer",
+      company: "Blidz",
+      time: "December 2019 - present",
+      tasks: [
+        "Learn Backend & DevOps technologies",
+        "Develop, maintain Blidz application",
+        "Backend Development"
+      ]
     },
     {
       id: 1,
-      title: 'Junior Web Developer',
-      company: 'INTEGRIFY',
-      time: 'June 2019 - November 2019',
+      title: "Junior Web Developer",
+      company: "INTEGRIFY",
+      time: "June 2019 - November 2019",
       tasks: [
-        'Develop an in-house web application for form customization and online surveys using MERN stack'
+        "Develop an in-house web application for form customization and online surveys using MERN stack"
       ]
     }
   ];

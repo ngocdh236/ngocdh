@@ -1,42 +1,43 @@
-import React from 'react';
+import React from "react";
 
-import '../styles/Skills.scss';
+import "../styles/Skills.scss";
 
 export default function Skills(props) {
   const icons = [
-    { name: 'fab fa-js-square', color: '#f0db4f' },
-    { name: 'fab fa-react', color: '#61dbfb' },
-    { name: 'fab fa-sass', color: '#cd6799' },
-    { name: 'fab fa-css3-alt', color: '#e31b5f' },
-    { name: 'fab fa-html5', color: '#E44D26' },
-    { name: 'fab fa-npm', color: '#303030' },
-    { name: 'fab fa-node-js', color: '#3C873A' },
-    { name: 'fab fa-swift', color: 'orange' },
-    { name: 'fab fa-github', color: '#7dbbe6' },
-    { name: 'fab fa-bitbucket', color: '#0357D1' }
+    { name: "fab fa-js-square", color: "#f0db4f" },
+    { name: "fab fa-react", color: "#61dbfb" },
+    { name: "fab fa-sass", color: "#cd6799" },
+    { name: "fab fa-css3-alt", color: "#e31b5f" },
+    { name: "fab fa-html5", color: "#E44D26" },
+    { name: "fab fa-npm", color: "#303030" },
+    { name: "fab fa-node-js", color: "#3C873A" },
+    { name: "fab fa-swift", color: "orange" },
+    { name: "fab fa-github", color: "#7dbbe6" },
+    { name: "fab fa-bitbucket", color: "#0357D1" }
   ];
 
   const skills = [
     {
       id: 0,
-      title: 'Strong In',
+      title: "Working With",
       list: [
-        'JavaScript, SCSS, HTML',
-        'React, Redux, Flow',
-        'Node.js, Express.js, Mongoose'
+        "Python, Django, FastAPI, Pytest",
+        "JavaScript, SCSS, HTML",
+        "React, Redux, Flow",
+        "Node.js, Express.js, Mongoose, Mocha"
       ]
     },
     {
       id: 1,
-      title: 'Knowledgeable With',
-      list: ['iOS, Android development', 'Design', 'Unit testing', 'GraphQL']
+      title: "Knowledgeable With",
+      list: ["iOS, Android development", "Design", "GraphQL"]
     }
   ];
 
   const workflow = [
-    'Responsive Design',
-    'Continuous Integration, Continuous Delivery',
-    'Agile Development & Scrum'
+    "Agile Development & Scrum",
+    "Continuous Integration, Continuous Delivery",
+    "Responsive Design"
   ];
 
   return (
