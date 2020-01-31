@@ -4,6 +4,7 @@ import "../styles/Skills.scss";
 
 export default function Skills(props) {
   const icons = [
+    { name: "fab fa-python", color: "#4B8BBE" },
     { name: "fab fa-js-square", color: "#f0db4f" },
     { name: "fab fa-react", color: "#61dbfb" },
     { name: "fab fa-sass", color: "#cd6799" },

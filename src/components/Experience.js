@@ -12,7 +12,7 @@ export default function Experience(props) {
       tasks: [
         "Learn Backend & DevOps technologies",
         "Develop, maintain Blidz application",
-        "Backend Development"
+        "Backend development"
       ]
     },
     {
