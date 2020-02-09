@@ -31,7 +31,7 @@ export default function Skills(props) {
     {
       id: 1,
       title: "Knowledgeable With",
-      list: ["iOS, Android development", "Design", "GraphQL"]
+      list: ["iOS, Android development"]
     }
   ];
 
