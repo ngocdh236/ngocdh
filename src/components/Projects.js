@@ -1,6 +1,6 @@
-import React from 'react';
-
 import '../styles/Projects.scss';
+
+import React from 'react';
 
 export default function Projects(props) {
   const projects = [
@@ -36,7 +36,7 @@ export default function Projects(props) {
       id: 1,
       name: 'Todo',
       link: 'https://todo-web.netlify.com/',
-      description: 'A todo wep application',
+      description: 'A todo web application',
       image: require('../assets/images/projectTodo.png'),
       stacks: ['React', 'HTML', 'SCSS', 'Bootstrap', 'Netlify']
     },
