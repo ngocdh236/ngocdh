@@ -34,7 +34,7 @@ export default function Projects(props) {
     },
     {
       id: 1,
-      name: 'Todo',
+      name: 'Todo-web',
       link: 'https://todo-web.netlify.com/',
       description: 'A todo web application',
       image: require('../assets/images/projectTodo.png'),
@@ -65,7 +65,7 @@ export default function Projects(props) {
     },
     {
       id: 3,
-      name: 'Gogocar-assignment',
+      name: 'HSL routes',
       link: 'https://gogocar-assignment.now.sh/',
       description: "A web application for querying routes from HSL's APIs",
       image: require('../assets/images/projectGogo.png'),
@@ -77,7 +77,7 @@ export default function Projects(props) {
     },
     {
       id: 4,
-      name: 'DREAMBROKER-assignment',
+      name: 'Text analyzer',
       link: 'https://github.com/ngocdh236/DREAMBROKER-TheProgrammingAssignment',
       description: 'An endpoint to analyze text',
       image: require('../assets/images/projectDREAM.png'),

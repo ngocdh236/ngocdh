@@ -6,22 +6,12 @@ export default function Experience(props) {
   const experience = [
     {
       id: 0,
-      title: "Junior Software Engineer",
+      title: "Software Engineer",
       company: "Blidz",
       time: "December 2019 - present",
       tasks: [
-        "Learn Backend & DevOps technologies",
-        "Develop, maintain Blidz application",
-        "Backend development"
-      ]
-    },
-    {
-      id: 1,
-      title: "Junior Web Developer",
-      company: "INTEGRIFY",
-      time: "June 2019 - November 2019",
-      tasks: [
-        "Develop an in-house web application for form customization and online surveys using MERN stack"
+        "Develop and maintain RESTful APIs for company products with Python, using Django and Tornado frameworks",
+        "CI, CD with Git, Vagrant, SaltStack, Jenkins and GCP"
       ]
     }
   ];

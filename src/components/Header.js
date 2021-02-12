@@ -18,7 +18,7 @@ export default function Header(props) {
 
   const [jobTitle, dispatchJobTitle] = useReducer(jobTitleReducer, "");
 
-  const jobTitleCharacters = "Junior Software Developer".split("");
+  const jobTitleCharacters = "Software Developer".split("");
 
   const addingCharacterTime = 80;
   const removingCharacterTime = 40;

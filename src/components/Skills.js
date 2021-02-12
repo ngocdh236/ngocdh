@@ -22,10 +22,10 @@ export default function Skills(props) {
       id: 0,
       title: "Working With",
       list: [
-        "Python, Django, FastAPI, Pytest",
-        "JavaScript, SCSS, HTML",
-        "React, Redux, Flow",
-        "Node.js, Express.js, Mongoose, Mocha"
+        "Python, Django, Tornado",
+        "JavaScript, React, Node.js",
+        "MariaDB, MongoDB",
+        "Vagrant, SaltStack, GCP"
       ]
     },
     {
@@ -36,9 +36,8 @@ export default function Skills(props) {
   ];
 
   const workflow = [
-    "Agile Development & Scrum",
-    "Continuous Integration, Continuous Delivery",
-    "Responsive Design"
+    "Agile Software Development, Scrum",
+    "CI, CD"
   ];
 
   return (
