@@ -18,7 +18,7 @@ export default function Header(props) {
 
   const [jobTitle, dispatchJobTitle] = useReducer(jobTitleReducer, "");
 
-  const jobTitleCharacters = "Software Developer".split("");
+  const jobTitleCharacters = "Software Engineer".split("");
 
   const addingCharacterTime = 80;
   const removingCharacterTime = 40;
@@ -27,7 +27,7 @@ export default function Header(props) {
   const writingJobTitle = () => {
     var timer = 0;
 
-    jobTitleCharacters.forEach(character => {
+    jobTitleCharacters.forEach((character) => {
       setTimeout(() => {
         dispatchJobTitle({ type: "ADD_CHARACTER", character });
       }, timer);
@@ -36,7 +36,7 @@ export default function Header(props) {
 
     timer += pauseTime;
 
-    jobTitleCharacters.forEach(character => {
+    jobTitleCharacters.forEach((character) => {
       setTimeout(() => {
         dispatchJobTitle({ type: "REMOVE_CHARACTER", character });
       }, timer);

@@ -14,7 +14,7 @@ export default function Skills(props) {
     { name: "fab fa-node-js", color: "#3C873A" },
     { name: "fab fa-swift", color: "orange" },
     { name: "fab fa-github", color: "#7dbbe6" },
-    { name: "fab fa-bitbucket", color: "#0357D1" }
+    { name: "fab fa-bitbucket", color: "#0357D1" },
   ];
 
   const skills = [
@@ -22,41 +22,37 @@ export default function Skills(props) {
       id: 0,
       title: "Working With",
       list: [
-        "Python, Django, Tornado",
         "JavaScript, React, Node.js",
-        "MariaDB, MongoDB",
-        "Vagrant, SaltStack, GCP"
-      ]
+        "Python, Django",
+        "MongoDB, GraphQL, Elasticsearch",
+      ],
     },
     {
       id: 1,
       title: "Knowledgeable With",
-      list: ["iOS, Android development"]
-    }
+      list: ["Docker, Kubernetes, AWS, Azure, GCP", "iOS, Android development"],
+    },
   ];
 
-  const workflow = [
-    "Agile Software Development, Scrum",
-    "CI, CD"
-  ];
+  const workflow = ["Agile Software Development, Scrum", "CI, CD"];
 
   return (
     <div ref={props.reference} className="Skills p-5">
       <h2>Skills</h2>
 
       <ul className="list-inline dev-icons">
-        {icons.map(icon => (
+        {icons.map((icon) => (
           <li key={icon.name} className="list-inline-item">
             <i className={icon.name} style={{ color: icon.color }}></i>
           </li>
         ))}
       </ul>
 
-      {skills.map(skill => (
+      {skills.map((skill) => (
         <div key={skill.id} className="mr-5">
           <h5>{skill.title}</h5>
           <ul>
-            {skill.list.map(element => (
+            {skill.list.map((element) => (
               <li key={element}>{element}</li>
             ))}
           </ul>
@@ -65,7 +61,7 @@ export default function Skills(props) {
 
       <h5>Workflow</h5>
       <ul className="fa-ul">
-        {workflow.map(element => (
+        {workflow.map((element) => (
           <li key={element}>
             <i className="fa-li fa fa-check"></i>
             {element}
