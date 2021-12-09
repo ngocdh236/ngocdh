@@ -22,7 +22,10 @@ export default function Experience(props) {
       time: "December 2019 - April 2021",
       tasks: [
         "Blidz is a social shopping app",
-        "Task: Develop and maintain RESTful APIs",
+        "Develop and maintain RESTful APIs",
+        "Migrating from Python 2 to Python 3",
+        "Integrating new authentication service, new payment gateway and new image processing service",
+        "Implementing new gamified features, etc.",
         "Keywords: E-commerce, gamified, backend development, Python, Django, MongoDB, Elasticsearch, Vagrant, SaltStack, GCP",
       ],
     },
