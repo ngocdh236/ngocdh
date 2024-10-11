@@ -22,15 +22,18 @@ export default function Skills(props) {
       id: 0,
       title: "Working With",
       list: [
-        "JavaScript, React, Node.js",
-        "Python, Django",
-        "MongoDB, GraphQL, Elasticsearch",
+        "Python, Kotlin, FastAPI, Flask, PostgreSQL",
+        "Docker, Kubernetes, AWS",
       ],
     },
     {
       id: 1,
       title: "Knowledgeable With",
-      list: ["Docker, Kubernetes, AWS, Azure, GCP", "iOS, Android development"],
+      list: [
+        "PHP, JavaScript, Django, React, Node.js",
+        "MongoDB, GraphQL, Elasticsearch, GCP",
+        // "iOS, Android development",
+      ],
     },
   ];
 
@@ -40,13 +43,13 @@ export default function Skills(props) {
     <div ref={props.reference} className="Skills p-5">
       <h2>Skills</h2>
 
-      <ul className="list-inline dev-icons">
+      {/* <ul className="list-inline dev-icons">
         {icons.map((icon) => (
           <li key={icon.name} className="list-inline-item">
             <i className={icon.name} style={{ color: icon.color }}></i>
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       {skills.map((skill) => (
         <div key={skill.id} className="mr-5">
@@ -59,7 +62,7 @@ export default function Skills(props) {
         </div>
       ))}
 
-      <h5>Workflow</h5>
+      {/* <h5>Workflow</h5>
       <ul className="fa-ul">
         {workflow.map((element) => (
           <li key={element}>
@@ -67,7 +70,7 @@ export default function Skills(props) {
             {element}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

@@ -1,13 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
-import './App.scss';
+import "./App.scss";
 
-import Nav from './components/Nav';
-import Header from './components/Header';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Education from './components/Education';
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
 
 export default function App() {
   const headerRef = useRef(null);
@@ -16,16 +16,16 @@ export default function App() {
   const experienceRef = useRef(null);
   const educationRef = useRef(null);
 
-  const scrollToRef = ref =>
+  const scrollToRef = (ref) =>
     window.scrollTo({
       top: ref.current.offsetTop + window.innerHeight - 60,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
-  const scrollToHead = ref =>
+  const scrollToHead = (ref) =>
     window.scrollTo({
       top: ref.current.offsetTop,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
   const scrollToHeader = () => scrollToHead(headerRef);
@@ -35,8 +35,8 @@ export default function App() {
   const scrollToEducation = () => scrollToRef(educationRef);
 
   useEffect(() => {
-    fetch('https://web-traffic-tracking.herokuapp.com/api/ngocdh', {
-      method: 'POST'
+    fetch("https://web-traffic-tracking.herokuapp.com/api/ngocdh", {
+      method: "POST",
     });
   }, []);
 
@@ -53,13 +53,13 @@ export default function App() {
       <div
         style={{
           top: window.innerHeight,
-          position: 'absolute',
-          background: 'white'
+          position: "absolute",
+          background: "white",
         }}
       >
-        <Projects reference={projectsRef} />
-        <Skills reference={skillsRef} />
         <Experience reference={experienceRef} />
+        <Skills reference={skillsRef} />
+        <Projects reference={projectsRef} />
         <Education reference={educationRef} />
 
         <div className="contact">

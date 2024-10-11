@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import '../styles/Nav.scss';
+import "../styles/Nav.scss";
 
 export default function Nav(props) {
   const {
@@ -8,26 +8,26 @@ export default function Nav(props) {
     scrollToProjects,
     scrollToSkills,
     scrollToExperience,
-    scrollToEducation
+    scrollToEducation,
   } = props;
 
   const links = [
     {
-      title: 'Projects',
-      onClick: scrollToProjects
+      title: "Experience",
+      onClick: scrollToExperience,
     },
     {
-      title: 'Skills',
-      onClick: scrollToSkills
+      title: "Skills",
+      onClick: scrollToSkills,
     },
     {
-      title: 'Experience',
-      onClick: scrollToExperience
+      title: "Projects",
+      onClick: scrollToProjects,
     },
     {
-      title: 'Education',
-      onClick: scrollToEducation
-    }
+      title: "Education",
+      onClick: scrollToEducation,
+    },
   ];
   return (
     <nav className="Nav navbar navbar-expand-sm">
@@ -48,7 +48,7 @@ export default function Nav(props) {
         id="mobile-nav"
       >
         <ul className="navbar-nav ml-auto">
-          {links.map(link => (
+          {links.map((link) => (
             <li key={link.title} className="nav-item">
               <button className="nav-link" onClick={link.onClick}>
                 {link.title}
